@@ -4,7 +4,7 @@ import http from "http";
 import connectDB from "./utils/db";
 // import { initSocketServer } from "./socketServer";
 require("dotenv").config();
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
 // cloudinary confilg >>>
 cloudinary.config({
@@ -16,7 +16,7 @@ cloudinary.config({
 // initSocketServer(server);
 
 // create server >>>
-server.listen(process.env.PORT, () => {
-  console.log(`Server is connected with port ${process.env.PORT}`);
-  connectDB();
-});
+// server.listen(process.env.PORT, () => {
+//   console.log(`Server is connected with port ${process.env.PORT}`);
+//   connectDB();
+// });

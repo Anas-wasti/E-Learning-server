@@ -1,15 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const app_1 = require("./app");
 const cloudinary_1 = require("cloudinary");
-const http_1 = __importDefault(require("http"));
-const db_1 = __importDefault(require("./utils/db"));
 // import { initSocketServer } from "./socketServer";
 require("dotenv").config();
-const server = http_1.default.createServer(app_1.app);
+// const server = http.createServer(app);
 // cloudinary confilg >>>
 cloudinary_1.v2.config({
     cloud_name: process.env.CLOUD_NAME,
@@ -18,7 +12,7 @@ cloudinary_1.v2.config({
 });
 // initSocketServer(server);
 // create server >>>
-server.listen(process.env.PORT, () => {
-    console.log(`Server is connected with port ${process.env.PORT}`);
-    (0, db_1.default)();
-});
+// server.listen(process.env.PORT, () => {
+//   console.log(`Server is connected with port ${process.env.PORT}`);
+//   connectDB();
+// });
