@@ -24,7 +24,7 @@ app.use(
     origin: ["e-learning-client-lime.vercel.app"],
     credentials: true,
   })
-);
+); 
 
 // api requests limit >>>
 const limiter = rateLimit({
