@@ -50,6 +50,5 @@ exports.app.get("/test", (req, res, next) => {
 //   err.statusCode = 404;
 //   next(err);
 // });
-// Apply the rate limiting middleware to all requests. >>>
 exports.app.use(limiter);
 exports.app.use(error_1.ErrorMiddleware);

@@ -62,7 +62,6 @@ app.get("/test", (req: Request, res: Response, next: NextFunction) => {
 //   next(err);
 // });
 
-// Apply the rate limiting middleware to all requests. >>>
 app.use(limiter);
 
 app.use(ErrorMiddleware);
